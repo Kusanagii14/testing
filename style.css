@@ -1,0 +1,41 @@
+
+body {
+  height: 100%;
+  width: 100%;
+  background: #0f1c31;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#musicBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #d52d58;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(245, 148, 184, 0.7);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+#musicBtn:hover {
+  background: #b8214a;
+}
+
+/* Placeholder style for petals, leaves, etc. */
+.glass, .shine, .petals div, .leaves div, .thorns div, .deadPetals div {
+  background: #d52d58;
+  border-radius: 8px;
+  margin: 2px;
+}

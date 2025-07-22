@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bunga Animasi dengan Musik</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="glass">
+      <div class="shine"></div>
+    </div>
+    <div class="thorns">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="leaves">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="petals">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="deadPetals">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Musik -->
+  <audio id="bgMusic" loop>
+    <source src="wantingyou.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Tombol Musik -->
+  <button id="musicBtn">🔊 Play Music</button>
+
+  <!-- Script Musik -->
+  <script>
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
+    let isPlaying = false;
+
+    btn.addEventListener("click", () => {
+      if (!isPlaying) {
+        music.play();
+        btn.textContent = "🔈 Pause Music";
+      } else {
+        music.pause();
+        btn.textContent = "🔊 Play Music";
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+</body>
+</html>
